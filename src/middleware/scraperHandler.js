@@ -42,18 +42,24 @@ const minimalArgs = [
 ];
 
 const PCR = require("puppeteer-chromium-resolver");
+const chromium = require("@sparticuz/chromium");
+
+// chromium.setHeadlessMode = true;
+// chromium.setGraphicsMode = false;
 
 const createScraperMiddleware = () => {
   const middleware = async (req, res, next) => {
-    const stats = await PCR({});
+    // const stats = await PCR({});
+
 
     const browserOptions = {
       headless: "new",
       defaultViewport: { width: 100, height: 100 },
       args: minimalArgs,
-      executablePath: stats.executablePath
+      executablePath: await chromium.executablePath(),
+      // executablePath: stats.executablePath
     };
-    
+
     if (!middleware.browser) {
       middleware.browser = await puppeteer.launch(browserOptions);
     }
