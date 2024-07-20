@@ -13,7 +13,8 @@
     "lint:fix": "eslint --fix ."
   },
   "engines": {
-    "node": "^14"
+    "node": "20.11.0",
+    "npm": "10.2.4"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
