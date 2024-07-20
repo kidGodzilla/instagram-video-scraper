@@ -1,0 +1,9 @@
+deb http://archive.ubuntu.com/ubuntu/ maverick-updates main universe restricted
+deb-src http://archive.ubuntu.com/ubuntu/ maverick-updates main universe restricted
+
+deb http://security.ubuntu.com/ubuntu maverick-security main restricted
+deb-src http://security.ubuntu.com/ubuntu maverick-security main restricted
+deb http://security.ubuntu.com/ubuntu maverick-security universe
+deb-src http://security.ubuntu.com/ubuntu maverick-security universe
+deb http://security.ubuntu.com/ubuntu maverick-security multiverse
+deb-src http://security.ubuntu.com/ubuntu maverick-security multiverse
