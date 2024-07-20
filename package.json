@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "SET NODE_ENV=production && node ./src/bin/www",
+    "mac": "PORT=5001 NODE_ENV=production node ./src/bin/www",
     "dev": "SET NODE_ENV=development && nodemon ./src/bin/www",
+    "deploy": "git push dokku main:master",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "lint": "eslint .",
