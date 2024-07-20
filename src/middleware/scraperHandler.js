@@ -41,14 +41,19 @@ const minimalArgs = [
   '--window-size=100,100'
 ];
 
-const browserOptions = {
-  headless: "new",
-  defaultViewport: { width: 100, height: 100 },
-  args: minimalArgs,
-};
+const PCR = require("puppeteer-chromium-resolver");
 
 const createScraperMiddleware = () => {
   const middleware = async (req, res, next) => {
+    const stats = await PCR({});
+
+    const browserOptions = {
+      headless: "new",
+      defaultViewport: { width: 100, height: 100 },
+      args: minimalArgs,
+      executablePath: stats.executablePath
+    };
+    
     if (!middleware.browser) {
       middleware.browser = await puppeteer.launch(browserOptions);
     }
