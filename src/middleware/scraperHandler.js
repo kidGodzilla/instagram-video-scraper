@@ -49,15 +49,17 @@ const chromium = require("@sparticuz/chromium");
 
 const createScraperMiddleware = () => {
   const middleware = async (req, res, next) => {
-    // const stats = await PCR({});
-
+    const stats = await PCR({});
 
     const browserOptions = {
       headless: "new",
+      // headless: chromium.headless,
+      // defaultViewport: chromium.defaultViewport,
       defaultViewport: { width: 100, height: 100 },
+      // args: chromium.args,
       args: minimalArgs,
-      executablePath: await chromium.executablePath(),
-      // executablePath: stats.executablePath
+      // executablePath: await chromium.executablePath(),
+      executablePath: stats.executablePath
     };
 
     if (!middleware.browser) {
