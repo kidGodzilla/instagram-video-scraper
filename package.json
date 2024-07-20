@@ -13,8 +13,7 @@
     "lint:fix": "eslint --fix ."
   },
   "engines": {
-    "node": "20.11.0",
-    "npm": "10.2.4"
+    "node": "^14"
   },
   "dependencies": {
     "@sparticuz/chromium": "^117.0.0",
