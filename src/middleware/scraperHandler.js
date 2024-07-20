@@ -42,7 +42,7 @@ const minimalArgs = [
 ];
 
 const PCR = require("puppeteer-chromium-resolver");
-const chromium = require("@sparticuz/chromium");
+// const chromium = require("@sparticuz/chromium");
 
 // chromium.setHeadlessMode = true;
 // chromium.setGraphicsMode = false;
