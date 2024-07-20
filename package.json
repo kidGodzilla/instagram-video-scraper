@@ -26,7 +26,8 @@
     "http-errors": "^1.8.0",
     "morgan": "^1.10.0",
     "node-cache": "^5.1.2",
-    "puppeteer": "^21.3.6"
+    "puppeteer": "^21.3.6",
+    "puppeteer-chromium-resolver": "^22.0.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",

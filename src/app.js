@@ -5,6 +5,9 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const helmet = require('helmet');
 
+const PCR = require("puppeteer-chromium-resolver");
+const stats = PCR({});
+
 const indexRouter = require('./routes/index');
 
 const scraperHandler = require('./middleware/scraperHandler');
